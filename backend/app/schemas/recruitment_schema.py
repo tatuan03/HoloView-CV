@@ -61,6 +61,8 @@ class QuyTrinhUngTuyen(QuyTrinhUngTuyenCreate):
     LichPhongVan: Optional[list[LichPhongVan]]
     LichSuHoatDong: Optional[list[LichSuHoatDong]]
     DeXuatTuyenDung: Optional[list[DeXuatTuyenDung]]
+    HoSoCV: Optional[HoSoCVSimple] = None
+    ViTriTuyenDung: Optional[ViTriTuyenDungSimple] = None
 
     class Config:
         orm_mode = True
@@ -269,6 +271,28 @@ class ReviewDetails(BaseModel):
     HoSoCV: CVDetailsForReview
     KetQua: str
     NhanXet: Optional[str] = None
+
+    class Config:
+        orm_mode = True
+
+
+# --- Schemas con để lồng vào ---
+class UngVienDonGian(BaseModel):
+    HoTen: str
+
+    class Config:
+        orm_mode = True
+
+
+class HoSoCVSimple(BaseModel):
+    UngVien: UngVienDonGian
+
+    class Config:
+        orm_mode = True
+
+
+class ViTriTuyenDungSimple(BaseModel):
+    TenViTri: str
 
     class Config:
         orm_mode = True

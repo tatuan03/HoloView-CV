@@ -126,7 +126,7 @@ def create_technical_review(
 
     db_application = get_application_by_id(db, application_id=review_in.MaQuyTrinh)
     if db_application:
-        db_application.TrangThaiHienTai = f"Đã có kết quả ĐGKT: {review_in.KetQua}"
+        db_application.TrangThaiHienTai = f"Chờ đánh giá KT"
         db.add(db_application)
 
         # GHI LOG HÀNH ĐỘNG

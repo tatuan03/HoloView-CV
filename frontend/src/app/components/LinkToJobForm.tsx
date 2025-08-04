@@ -49,7 +49,7 @@ export default function LinkToJobForm({ cvId, onSuccess }: LinkToJobFormProps) {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md space-y-4">
-      <h3 className="font-semibold text-lg">Gán CV vào Vị trí Tuyển dụng</h3>
+      <h3 className="font-semibold text-lg text-black">Gán CV vào Vị trí Tuyển dụng</h3>
       <p className="text-sm text-gray-500">
         Hồ sơ này chưa được ứng tuyển vào vị trí nào.
       </p>
@@ -59,7 +59,7 @@ export default function LinkToJobForm({ cvId, onSuccess }: LinkToJobFormProps) {
           id="job"
           value={selectedJob}
           onChange={(e) => setSelectedJob(e.target.value)}
-          className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md text-gray-800"
         >
           {jobs.map(j => (<option key={j.MaViTri} value={j.MaViTri}>{j.TenViTri}</option>))}
         </select>

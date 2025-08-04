@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from typing import Optional, List  # <-- Chuyển Optional vào đây và thêm List
+from typing import Optional, List  
 
 from app.models import department as department_model
 from app.schemas import department_schema
